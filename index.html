@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#150f26">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>TimeMachine Retro Cam</title>
+<style>
+  :root{
+    --bg:#0b0714;
+    --surface:#150f26;
+    --card:#1c1533;
+    --border:#332a52;
+    --track:#3a3154;
+    --pink:#ff4d94;
+    --pink-deep:#d81b72;
+    --cyan:#3fd0e0;
+    --text:#f3eefc;
+    --muted:#9a8fc0;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    -webkit-tap-highlight-color:transparent;
+    position:relative;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;pointer-events:none;z-index:1;
+    background:repeating-linear-gradient(rgba(255,255,255,.02) 0px, rgba(255,255,255,.02) 1px, transparent 1px, transparent 3px);
+    mix-blend-mode:overlay;
+  }
+
+  .top{
+    position:sticky;top:0;z-index:6;
+    background:rgba(21,16,42,.96);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--border);
+    padding:10px 14px;
+    display:flex;flex-wrap:wrap;gap:10px;
+    align-items:center;justify-content:space-between;
+    box-shadow:0 1px 0 rgba(255,77,148,.15);
+  }
+  .brand{display:flex;align-items:center;gap:8px;min-width:0}
+  .brand-icon{
+    width:32px;height:32px;border-radius:9px;flex-shrink:0;
+    background:linear-gradient(135deg,var(--pink),#7b2ff7);
+    display:flex;align-items:center;justify-content:center;font-size:16px;
+    box-shadow:0 0 0 1px rgba(255,255,255,.15), 0 4px 10px rgba(255,77,148,.35);
+  }
+  .brand h1{margin:0;font-size:16px;font-weight:800;letter-spacing:.02em;color:var(--pink);white-space:nowrap;text-shadow:0 0 14px rgba(255,77,148,.5)}
+  .brand small{color:var(--muted);font-size:11px;display:block}
+  .actions{display:flex;gap:6px;flex-wrap:wrap}
+
+  .btn{
+    background:var(--card);
+    color:var(--text);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:9px 12px;
+    font-size:12px;
+    font-weight:600;
+    min-height:40px;
+    display:inline-flex;align-items:center;justify-content:center;gap:5px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:transform .1s ease, border-color .15s ease;
+  }
+  .btn:active{transform:scale(.96)}
+  .btn.primary{background:linear-gradient(135deg,var(--pink),var(--pink-deep));border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(216,27,114,.35)}
+
+  main{display:flex;min-height:calc(100vh - 66px);position:relative;z-index:2}
+  .preview{
+    flex:1;min-width:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:16px;
+  }
+  .wrap{
+    max-width:900px;width:100%;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:18px;
+    text-align:center;
+    overflow:hidden;
+    box-shadow:0 0 0 1px rgba(255,77,148,.08), 0 24px 50px rgba(0,0,0,.45);
+    position:relative;
+  }
+  .wrap::before, .wrap::after{
+    content:"";position:absolute;width:22px;height:22px;pointer-events:none;z-index:2;
+    border-color:rgba(255,77,148,.55);border-style:solid;
+  }
+  .wrap::before{top:10px;left:10px;border-width:2px 0 0 2px;border-radius:6px 0 0 0}
+  .wrap::after{bottom:10px;right:10px;border-width:0 2px 2px 0;border-radius:0 0 6px 0}
+  canvas{max-width:100%;max-height:65vh;display:inline-block;position:relative;z-index:1}
+  .tools{display:flex;gap:8px;margin:12px 0 0;justify-content:center;flex-wrap:wrap}
+
+  .panel{
+    width:360px;flex-shrink:0;
+    background:var(--surface);
+    border-left:1px solid var(--border);
+    padding:14px;overflow:auto;
+  }
+
+  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .tab{
+    background:var(--card);color:var(--muted);
+    border:1px solid var(--border);border-radius:10px;
+    padding:10px 4px;font-size:13px;font-weight:700;
+    cursor:pointer;min-height:44px;
+    transition:border-color .15s ease, color .15s ease, background .15s ease;
+  }
+  .tab.active{background:rgba(255,77,148,.14);border-color:var(--pink);color:var(--pink);box-shadow:inset 0 0 0 1px rgba(255,77,148,.25)}
+
+  .section{border-top:1px solid var(--border);margin-top:16px;padding-top:16px}
+  .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+  .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .badge{font-size:10px;font-family:monospace;color:var(--pink);background:rgba(255,77,148,.14);border:1px solid rgba(255,77,148,.3);border-radius:999px;padding:2px 8px}
+
+  .presets-grid{display:grid;gap:8px}
+  .preset{
+    display:block;width:100%;text-align:left;
+    padding:11px 12px;
+    background:var(--card);color:var(--text);
+    border:1px solid var(--border);border-radius:12px;
+    cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .preset b{font-size:13px}
+  .preset small{display:block;color:var(--muted);margin-top:3px;font-size:11px}
+  .preset.active{border-color:var(--pink);background:rgba(255,77,148,.1);box-shadow:inset 0 0 0 1px rgba(255,77,148,.2)}
+
+  .overlays-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .overlay{
+    display:flex;align-items:center;justify-content:space-between;gap:6px;
+    padding:9px 10px;background:var(--card);
+    border:1px solid var(--border);border-radius:10px;
+    font-size:11.5px;
+  }
+  .overlay input{width:18px;height:18px;accent-color:var(--pink)}
+
+  .stamp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+  input[type=text],select{
+    width:100%;padding:9px 10px;
+    background:var(--bg);color:var(--text);
+    border:1px solid var(--border);border-radius:8px;
+    font-size:12px;
+  }
+  .row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12.5px;margin:4px 0}
+
+  .slider-row{margin:14px 0}
+  .slider-row .row{margin-bottom:8px}
+
+  input[type=range]{
+    -webkit-appearance:none;
+    appearance:none;
+    width:100%;
+    height:8px;
+    border-radius:999px;
+    background:var(--track);
+    outline:none;
+    cursor:pointer;
+    margin:6px 0;
+  }
+  input[type=range]::-webkit-slider-runnable-track{
+    height:8px;border-radius:999px;background:transparent;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width:24px;height:24px;
+    margin-top:-8px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #ffffff 0%, var(--pink) 55%, var(--pink-deep) 100%);
+    box-shadow:0 0 0 5px rgba(255,77,148,.18), 0 4px 10px rgba(0,0,0,.4);
+    border:2px solid rgba(255,255,255,.55);
+    transition:box-shadow .15s ease, transform .1s ease;
+  }
+  input[type=range]:active::-webkit-slider-thumb{
+    box-shadow:0 0 0 8px rgba(255,77,148,.28), 0 4px 10px rgba(0,0,0,.4);
+    transform:scale(1.05);
+  }
+  input[type=range]::-moz-range-track{
+    height:8px;border-radius:999px;background:var(--track);
+  }
+  input[type=range]::-moz-range-progress{
+    height:8px;border-radius:999px;background:linear-gradient(90deg,var(--pink),var(--pink-deep));
+  }
+  input[type=range]::-moz-range-thumb{
+    width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.55);
+    background:radial-gradient(circle at 35% 30%, #ffffff 0%, var(--pink) 55%, var(--pink-deep) 100%);
+    box-shadow:0 0 0 5px rgba(255,77,148,.18), 0 4px 10px rgba(0,0,0,.4);
+  }
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+
+  #loading{
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:20;
+    align-items:center;justify-content:center;color:var(--pink);font-weight:700;
+    flex-direction:column;gap:8px;font-size:13px;letter-spacing:.05em;
+  }
+  #toast{
+    display:none;position:fixed;z-index:30;bottom:18px;left:50%;transform:translateX(-50%);
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:11px 16px;font-size:12.5px;box-shadow:0 10px 30px rgba(0,0,0,.4);
+    max-width:90vw;text-align:center;
+  }
+
+  #save-modal{
+    display:none;position:fixed;inset:0;z-index:40;
+    background:rgba(5,3,12,.92);
+    align-items:center;justify-content:center;flex-direction:column;gap:14px;
+    padding:20px;
+  }
+  #save-modal img{max-width:92vw;max-height:65vh;border-radius:12px;border:1px solid var(--border);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+  #save-modal p{font-size:13px;color:var(--muted);text-align:center;max-width:320px;margin:0}
+  #save-modal .btn{margin-top:4px}
+
+  @media(max-width:850px){
+    main{display:block}
+    .panel{width:100%;border-left:0;border-top:1px solid var(--border)}
+    .preview{padding:12px}
+    canvas{max-height:52vh}
+    .overlays-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:480px){
+    .top{flex-direction:column;align-items:stretch;padding:10px 12px}
+    .brand{justify-content:center;text-align:center}
+    .brand small{display:none}
+    .actions{display:grid;grid-template-columns:repeat(3,1fr)}
+    .btn{padding:10px 6px;font-size:11px}
+    .grid2{grid-template-columns:1fr}
+    .stamp-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div id="loading">⏳ PROCESSANDO EFEITO...</div>
+
+<div id="save-modal">
+  <img id="save-modal-img" alt="Foto gerada">
+  <p>Toque e segure a imagem acima e escolha <b>"Salvar imagem"</b> para guardar no seu celular.</p>
+  <button class="btn primary" id="save-modal-close">Fechar</button>
+</div>
+
+<header class="top">
+  <div class="brand">
+    <span class="brand-icon">📷</span>
+    <div>
+      <h1>TimeMachine Retro</h1>
+      <small>Estúdio Fotográfico Vintage • 80s • 90s • Y2K</small>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn" id="upload">📁 Carregar</button>
+    <input id="file" type="file" accept="image/*" hidden>
+    <button class="btn" id="sample">🖼️ Exemplo</button>
+    <button class="btn primary" id="save">⬇️ Salvar</button>
+  </div>
+</header>
+
+<main>
+  <section class="preview">
+    <div class="wrap"><canvas id="c"></canvas></div>
+    <div class="tools">
+      <button class="btn" id="compare">👁 Original</button>
+      <button class="btn" id="rotate">↻ Girar</button>
+      <button class="btn" id="reset">↩ Resetar</button>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <div class="tabs">
+      <button class="tab active" data-era="80s">1980s</button>
+      <button class="tab" data-era="90s">1990s</button>
+      <button class="tab" data-era="2000s">2000s</button>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <span class="label">Filtros da época</span>
+        <span class="badge" id="era-badge">Anos 80</span>
+      </div>
+      <div class="presets-grid" id="presets"></div>
+    </div>
+
+    <div class="section">
+      <span class="label">Efeitos e detalhes</span>
+      <div class="overlays-grid" id="overlays" style="margin-top:9px"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <span class="label">Data / Texto</span>
+        <label class="row" style="margin:0;gap:6px">
+          Ativar <input id="stampOn" type="checkbox" checked>
+        </label>
+      </div>
+      <div class="stamp-grid">
+        <input id="stamp" type="text" value="MAY.14 1986">
+        <select id="color">
+          <option value="#00ff66">Verde Neon</option>
+          <option value="#ff9900">Laranja</option>
+          <option value="#ffffff">Branco</option>
+          <option value="#ff007f">Rosa Cyber</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="label">Ajustes finos</span>
+
+      <div class="slider-row">
+        <div class="row"><span>Intensidade</span><span id="v-int">100%</span></div>
+        <input id="int" type="range" min="0" max="100" value="100">
+      </div>
+      <div class="slider-row">
+        <div class="row"><span>Granulação</span><span id="v-grain">40%</span></div>
+        <input id="grain" type="range" min="0" max="100" value="40">
+      </div>
+      <div class="slider-row">
+        <div class="row"><span>RGB Shift</span><span id="v-rgb">25%</span></div>
+        <input id="rgb" type="range" min="0" max="100" value="25">
+      </div>
+      <div class="slider-row">
+        <div class="row"><span>Vinheta</span><span id="v-vig">40%</span></div>
+        <input id="vig" type="range" min="0" max="100" value="40">
+      </div>
+
+      <div class="grid2">
+        <div>
+          <div class="row"><span>Brilho</span><span id="v-bright">0</span></div>
+          <input id="bright" type="range" min="-50" max="50" value="0">
+        </div>
+        <div>
+          <div class="row"><span>Contraste</span><span id="v-contrast">15</span></div>
+          <input id="contrast" type="range" min="-50" max="50" value="15">
+        </div>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<div id="toast"></div>
+
+<script>
+(() => {
+  "use strict";
+  const $ = id => document.getElementById(id);
+  const c = $("c");
+  const x = c.getContext("2d", { willReadFrequently: true });
+
+  let im = new Image();
+  let ok = false;
+  let rot = 0;
+  let cmp = false;
+  let era = "80s";
+  let pk = "vhs";
+  let ov = {};
+
+  const D = {
+    "80s": {
+      s: "MAY.14 1986", col: "#00ff66",
+      p: {
+        vhs:    ["Fita VHS", "Scanlines e magenta", 1.4, 1.15, .15, 25, 40, 40],
+        neon:   ["Neon Cyberpunk", "Cores vibrantes", 1.8, 1.3, .05, 35, 20, 30],
+        super8: ["Projetor Super 8", "Filme amarelado", 1.1, 1.05, .4, 10, 50, 60]
+      },
+      o: [["lines","Linhas VHS",1], ["glitch","Glitch VHS",1], ["pink","Vazamento Rosa",1], ["hud","HUD PLAY REC",0]]
+    },
+    "90s": {
+      s: "'98 10 24", col: "#ff9900",
+      p: {
+        kodak:    ["Kodak Gold 200", "Filme quente", 1.25, 1.1, .25, 8, 35, 35],
+        fuji:     ["Descartável", "Flash e verdes", 1.15, 1.2, .1, 12, 45, 45],
+        polaroid: ["Polaroid", "Desbotado", .9, .95, .3, 5, 35, 50]
+      },
+      o: [["dust","Poeira",1], ["warm","Vazamento Quente",1], ["polaroid","Moldura Polaroid",0], ["film","Borda Filme",0]]
+    },
+    "2000s": {
+      s: "2003/08/19", col: "#ffffff",
+      p: {
+        cyber:  ["Cyber-shot CCD", "Flash direto", 1.3, 1.25, 0, 5, 15, 20],
+        party:  ["Balada Y2K", "Flash estourado", 1.6, 1.35, .05, 15, 25, 30],
+        webcam: ["Webcam 2000", "Ruído digital", .95, 1.1, .1, 18, 60, 35]
+      },
+      o: [["glare","Glow / Flash",1], ["grid","Grade Digital",0], ["cam","HUD Digicam",1], ["star","Estrela Cyber",0]]
+    }
+  };
+
+  function msg(t) {
+    $("toast").textContent = t;
+    $("toast").style.display = "block";
+    setTimeout(() => $("toast").style.display = "none", 2500);
+  }
+  function busy(v) { $("loading").style.display = v ? "flex" : "none"; }
+  function cl(v) { return Math.max(0, Math.min(255, v)); }
+
+  function paintRange(el) {
+    const min = +el.min || 0, max = +el.max || 100, val = +el.value;
+    const pct = ((val - min) / (max - min)) * 100;
+    el.style.background = `linear-gradient(to right, var(--pink) 0%, var(--pink) ${pct}%, var(--track) ${pct}%, var(--track) 100%)`;
+  }
+  function paintAllRanges() {
+    document.querySelectorAll('input[type=range]').forEach(paintRange);
+  }
+
+  function set(src) {
+    busy(true);
+    const n = new Image();
+    n.onload = () => { im = n; ok = true; busy(false); draw(); };
+    n.onerror = () => { busy(false); msg("Erro ao carregar imagem"); };
+    n.src = src;
+  }
+
+  function sample() {
+    const q = document.createElement("canvas");
+    q.width = 1000; q.height = 750;
+    const z = q.getContext("2d");
+    const g = z.createLinearGradient(0, 0, 1000, 750);
+    g.addColorStop(0, "#25104f");
+    g.addColorStop(.5, "#6285d4");
+    g.addColorStop(1, "#ff76b8");
+    z.fillStyle = g; z.fillRect(0, 0, 1000, 750);
+    z.fillStyle = "#ffd000";
+    z.beginPath(); z.arc(500, 380, 140, 0, 7); z.fill();
+    set(q.toDataURL());
+  }
+
+  $("upload").onclick = () => $("file").click();
+  $("file").onchange = e => {
+    const f = e.target.files[0];
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = ev => set(ev.target.result);
+    r.readAsDataURL(f);
+  };
+  $("sample").onclick = sample;
+
+  document.querySelectorAll(".tab").forEach(b => {
+    b.onclick = () => {
+      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+      b.classList.add("active");
+      era = b.dataset.era;
+      pk = Object.keys(D[era].p)[0];
+      ui();
+      draw();
+    };
+  });
+
+  function ui() {
+    const d = D[era];
+    $("stamp").value = d.s;
+    $("color").value = d.col;
+    $("era-badge").textContent = era === "80s" ? "Anos 80" : era === "90s" ? "Anos 90" : "Anos 2000";
+    renderPresets();
+    renderOverlays();
+    setPreset();
+  }
+
+  function renderPresets() {
+    $("presets").innerHTML = "";
+    Object.entries(D[era].p).forEach(([k, p]) => {
+      const b = document.createElement("button");
+      b.className = "preset" + (k === pk ? " active" : "");
+      b.innerHTML = "<b>" + p[0] + "</b><small>" + p[1] + "</small>";
+      b.onclick = () => { pk = k; setPreset(); renderPresets(); draw(); };
+      $("presets").appendChild(b);
+    });
+  }
+
+  function renderOverlays() {
+    $("overlays").innerHTML = "";
+    ov = {};
+    D[era].o.forEach(o => {
+      ov[o[0]] = !!o[2];
+      const l = document.createElement("label");
+      l.className = "overlay";
+      l.innerHTML = "<span>" + o[1] + "</span><input type='checkbox' " + (o[2] ? "checked" : "") + ">";
+      l.querySelector("input").onchange = e => { ov[o[0]] = e.target.checked; draw(); };
+      $("overlays").appendChild(l);
+    });
+  }
+
+  function setPreset() {
+    const p = D[era].p[pk];
+    $("grain").value = p[6]; $("v-grain").textContent = p[6] + "%";
+    $("rgb").value = p[5];   $("v-rgb").textContent = p[5] + "%";
+    $("vig").value = p[7];   $("v-vig").textContent = p[7] + "%";
+    paintAllRanges();
+  }
+
+  const sliderLabels = { int: "v-int", grain: "v-grain", rgb: "v-rgb", vig: "v-vig", bright: "v-bright", contrast: "v-contrast" };
+  Object.entries(sliderLabels).forEach(([id, labelId]) => {
+    $(id).addEventListener("input", () => {
+      $(labelId).textContent = (id === "bright" || id === "contrast") ? $(id).value : $(id).value + "%";
+      paintRange($(id));
+      draw();
+    });
+  });
+  $("stamp").oninput = draw;
+  $("color").onchange = draw;
+  $("stampOn").onchange = draw;
+
+  $("rotate").onclick = () => { rot = (rot + 90) % 360; draw(); };
+  $("reset").onclick = () => {
+    rot = 0;
+    $("bright").value = 0; $("v-bright").textContent = "0";
+    $("contrast").value = 15; $("v-contrast").textContent = "15";
+    $("int").value = 100; $("v-int").textContent = "100%";
+    setPreset();
+    draw();
+    msg("Ajustes redefinidos");
+  };
+  $("compare").onpointerdown = () => { cmp = true; draw(); };
+  $("compare").onpointerup = () => { cmp = false; draw(); };
+  $("compare").onpointerleave = () => { if (cmp) { cmp = false; draw(); } };
+
+  function stamp(t, col, w, h) {
+    if (!t) return;
+    x.save();
+    x.fillStyle = col;
+    x.font = "bold " + Math.max(14, w * .038) + "px monospace";
+    x.shadowColor = col;
+    x.shadowBlur = 10;
+    x.fillText(t, w - x.measureText(t).width - w * .06, h - h * .06);
+    x.restore();
+  }
+
+  function effects(w, h) {
+    if (ov.lines) {
+      x.fillStyle = "rgba(0,0,0,.15)";
+      for (let y = 0; y < h; y += 4) x.fillRect(0, y, w, 2);
+    }
+    if (ov.glitch) {
+      for (let i = 0; i < 12; i++) {
+        x.fillStyle = i % 2 ? "rgba(255,0,100,.3)" : "rgba(0,255,100,.3)";
+        x.fillRect(0, h * .92 + Math.random() * h * .06, w, 2);
+      }
+    }
+    if (ov.pink) {
+      const g = x.createRadialGradient(w, 0, 10, w, 0, w * .8);
+      g.addColorStop(0, "rgba(255,0,128,.35)");
+      g.addColorStop(1, "transparent");
+      x.fillStyle = g; x.fillRect(0, 0, w, h);
+    }
+    if (ov.hud) {
+      x.fillStyle = "#00ff66";
+      x.font = "bold " + Math.max(16, w * .035) + "px monospace";
+      x.fillText("PLAY REC ●", w * .05, h * .1);
+    }
+    if (ov.dust) {
+      x.fillStyle = "rgba(255,255,255,.5)";
+      for (let i = 0; i < w * .01; i++) x.fillRect(Math.random() * w, Math.random() * h, 1, 8 + Math.random() * 25);
+    }
+    if (ov.warm) {
+      const g = x.createLinearGradient(0, 0, w * .4, h);
+      g.addColorStop(0, "rgba(255,140,0,.4)");
+      g.addColorStop(1, "transparent");
+      x.fillStyle = g; x.fillRect(0, 0, w, h);
+    }
+    if (ov.polaroid) {
+      x.fillStyle = "#f8f6f0";
+      const s = w * .05;
+      x.fillRect(0, 0, w, h * .05);
+      x.fillRect(0, 0, s, h);
+      x.fillRect(w - s, 0, s, h);
+      x.fillRect(0, h - h * .18, w, h * .18);
+    }
+    if (ov.film) {
+      x.fillStyle = "#090909";
+      x.fillRect(0, 0, w, h * .08);
+      x.fillRect(0, h - h * .08, w, h * .08);
+    }
+    if (ov.glare) {
+      const g = x.createRadialGradient(w / 2, h * .4, 10, w / 2, h * .4, w * .6);
+      g.addColorStop(0, "rgba(255,255,255,.35)");
+      g.addColorStop(1, "transparent");
+      x.fillStyle = g; x.fillRect(0, 0, w, h);
+    }
+    if (ov.grid) {
+      x.strokeStyle = "rgba(0,243,255,.15)";
+      for (let i = 0; i < w; i += 30) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, h); x.stroke(); }
+    }
+    if (ov.cam) {
+      x.fillStyle = "#fff";
+      x.font = "14px monospace";
+      x.fillText("[ ▇▇▇ ] FULL", w * .04, h * .08);
+      x.fillText("3.2 MP ISO 200", w * .04, h * .13);
+    }
+    if (ov.star) {
+      x.fillStyle = "#ff007f";
+      x.font = Math.min(w, h) * .12 + "px Arial";
+      x.fillText("★", w * .82, h * .9);
+    }
+  }
+
+  function draw() {
+    if (!ok) return;
+
+    const r = rot === 90 || rot === 270;
+    const w0 = r ? im.height : im.width;
+    const h0 = r ? im.width : im.height;
+    const s = Math.min(1, 1600 / Math.max(w0, h0));
+    const w = Math.round(w0 * s);
+    const h = Math.round(h0 * s);
+
+    c.width = w; c.height = h;
+
+    x.save();
+    x.translate(w / 2, h / 2);
+    x.rotate(rot * Math.PI / 180);
+    const dw = r ? h : w, dh = r ? w : h;
+    x.drawImage(im, -dw / 2, -dh / 2, dw, dh);
+    x.restore();
+
+    if (cmp) { stamp("ORIGINAL", "#fff", w, h); return; }
+
+    const p = D[era].p[pk];
+    const I = +$("int").value / 100;
+    const g = +$("grain").value / 100;
+    const br = +$("bright").value * 2.55;
+    const co = 1 + ((p[3] - 1) + (+$("contrast").value) / 100) * I;
+    const sa = 1 + (p[2] - 1) * I;
+    const se = p[4] * I;
+
+    const d = x.getImageData(0, 0, w, h);
+    const a = d.data;
+
+    for (let i = 0; i < a.length; i += 4) {
+      let R = a[i] + br, G = a[i + 1] + br, B = a[i + 2] + br;
+      R = ((R / 255 - .5) * co + .5) * 255;
+      G = ((G / 255 - .5) * co + .5) * 255;
+      B = ((B / 255 - .5) * co + .5) * 255;
+      const L = .299 * R + .587 * G + .114 * B;
+      R = L + sa * (R - L);
+      G = L + sa * (G - L);
+      B = L + sa * (B - L);
+      if (se) {
+        const sr = .393 * R + .769 * G + .189 * B;
+        const sg = .349 * R + .686 * G + .168 * B;
+        const sb = .272 * R + .534 * G + .131 * B;
+        R = R * (1 - se) + sr * se;
+        G = G * (1 - se) + sg * se;
+        B = B * (1 - se) + sb * se;
+      }
+      const n = (Math.random() - .5) * g * .35 * 255;
+      a[i] = cl(R + n); a[i + 1] = cl(G + n); a[i + 2] = cl(B + n);
+    }
+    x.putImageData(d, 0, 0);
+
+    const sh = Math.round(+$("rgb").value * I * w / 800);
+    if (sh) {
+      const q = x.getImageData(0, 0, w, h);
+      const cp = new Uint8ClampedArray(q.data);
+      for (let y = 0; y < h; y++) {
+        for (let xx = 0; xx < w; xx++) {
+          const i = (y * w + xx) * 4;
+          q.data[i] = cp[(y * w + Math.min(w - 1, xx + sh)) * 4];
+          q.data[i + 2] = cp[(y * w + Math.max(0, xx - sh)) * 4 + 2];
+        }
+      }
+      x.putImageData(q, 0, 0);
+    }
+
+    const v = +$("vig").value / 100;
+    if (v) {
+      const q = x.createRadialGradient(w / 2, h / 2, Math.min(w, h) * .35, w / 2, h / 2, Math.hypot(w / 2, h / 2));
+      q.addColorStop(0, "transparent");
+      q.addColorStop(1, "rgba(0,0,0," + .85 * v + ")");
+      x.fillStyle = q; x.fillRect(0, 0, w, h);
+    }
+
+    effects(w, h);
+    if ($("stampOn").checked) stamp($("stamp").value, $("color").value, w, h);
+  }
+
+  function openSaveModal(url) {
+    $("save-modal-img").src = url;
+    $("save-modal").style.display = "flex";
+  }
+  $("save-modal-close").onclick = () => { $("save-modal").style.display = "none"; };
+
+  async function savePhoto() {
+    if (!ok) { msg("Carregue uma foto primeiro"); return; }
+    busy(true);
+    await new Promise(r => setTimeout(r, 80));
+
+    c.toBlob(async (blob) => {
+      busy(false);
+      if (!blob) { msg("Erro ao gerar a imagem"); return; }
+
+      const fileName = "TimeMachine_" + era + ".jpg";
+
+      if (navigator.share) {
+        try {
+          const file = new File([blob], fileName, { type: "image/jpeg" });
+          if (!navigator.canShare || navigator.canShare({ files: [file] })) {
+            await navigator.share({ files: [file], title: "TimeMachine Retro" });
+            msg("Foto compartilhada!");
+            return;
+          }
+        } catch (err) {
+          // usuário cancelou o compartilhamento, ou não suportado -> segue pro fallback
+        }
+      }
+
+      const blobUrl = URL.createObjectURL(blob);
+
+      try {
+        const a = document.createElement("a");
+        a.href = blobUrl; a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      } catch (err) { /* ignora, o modal abaixo cobre esse caso */ }
+
+      openSaveModal(blobUrl);
+      msg("Segure a imagem na tela pra salvar");
+    }, "image/jpeg", .95);
+  }
+  $("save").onclick = savePhoto;
+
+  ui();
+  paintAllRanges();
+  sample();
+})();
+</script>
+</body>
+</html>
